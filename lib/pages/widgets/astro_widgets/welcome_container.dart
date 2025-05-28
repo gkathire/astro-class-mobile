@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:astro_mobile/constant/app_images.dart';
 import 'package:astro_mobile/screen_utils/extensions/extens.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
@@ -6,7 +8,9 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 class WelcomeContainer extends StatelessWidget {
   final String? title, subtitle;
-  const WelcomeContainer({super.key, this.title, this.subtitle});
+  final Uint8List? profileByesData;
+  const WelcomeContainer(
+      {super.key, this.title, this.subtitle, this.profileByesData});
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +51,24 @@ class WelcomeContainer extends StatelessWidget {
           Spacer(),
           Stack(
             children: [
-              CircleAvatar(
-                radius: 20.sp,
-                backgroundImage: AssetImage(AppImages.person),
+              IconButton(
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+                icon: profileByesData != null
+                    ? ClipOval(
+                        child: Image.memory(
+                          profileByesData!,
+                          fit: BoxFit.cover,
+                          width: 50,
+                          height: 50,
+                        ),
+                      )
+                    : CircleAvatar(
+                        radius: 20.sp,
+                        backgroundColor: ThemeColor.lightGrey,
+                        backgroundImage: AssetImage(AppImages.person),
+                      ),
               ),
               Positioned(
                 top: -10,
