@@ -1,0 +1,1 @@
+class NotAbleToInitializeMovieException implements Exception {}
