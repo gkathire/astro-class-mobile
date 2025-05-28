@@ -34,7 +34,7 @@ class WelcomeContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                title ?? 'Welcome back, Vasu',
+                title ?? 'Welcome back',
                 style: TextStyle(
                   color: AppColors.textColor,
                   fontSize: 19.sp,

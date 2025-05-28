@@ -9,7 +9,7 @@ import 'package:astro_mobile/framework/enum/app_enum.dart';
 import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
 import 'package:astro_mobile/framework/services/real_time_communication/real_time_communication_service.dart';
 import 'package:astro_mobile/pages/loading_widgets/splash_screen_widget.dart';
-import 'package:astro_mobile/pages/screens/astro_screens/modules/bottom_nav_bar/bottom_nav_bar.dart';
+import 'package:astro_mobile/pages/screens/astro_screens/astro_base_layout_screen.dart';
 import 'package:astro_mobile/pages/screens/auth_screens/login/login_page.dart';
 import 'package:astro_mobile/theme_data/app_theme.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                       debugShowCheckedModeBanner: false,
                       // home: Homepage(),
                       // home: ClassList(),
-                      home: CustomBottomNav(),
+                      home: AstroBaseLayoutScreen(),
                     );
                   },
                 );

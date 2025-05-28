@@ -1,5 +1,9 @@
+import 'dart:typed_data';
+
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:astro_mobile/constant/app_images.dart';
 import 'package:astro_mobile/constant/app_vectors.dart';
+import 'package:astro_mobile/pages/layout/sidebar/sidebar_widget.dart';
 import 'package:astro_mobile/pages/widgets/astro_widgets/welcome_container.dart';
 import 'package:astro_mobile/screen_utils/extensions/extens.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
@@ -7,12 +11,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class ClassList extends StatelessWidget {
-  const ClassList({super.key});
+class ClassListPage extends StatelessWidget {
+  final LoggedInUserModel? userModel;
+  final Uint8List? profileByesData;
+  const ClassListPage(
+      {super.key, required this.userModel, required this.profileByesData});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SidebarWidget(
+        profileByesData: profileByesData,
+        userModel: userModel,
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
@@ -27,7 +38,8 @@ class ClassList extends StatelessWidget {
               ),
               1.ph,
               WelcomeContainer(
-                title: "Your Astrology Classroom",
+                profileByesData: profileByesData,
+                title: "Your Astrology Classes",
                 subtitle: "Discover signs, planets and more",
               ),
               2.ph,

@@ -1,15 +1,8 @@
 import 'dart:typed_data';
 
 import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
-import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
-import 'package:astro_mobile/common_widget/dialogs/loading_dialog.dart';
 import 'package:astro_mobile/constant/app_images.dart';
 import 'package:astro_mobile/constant/app_vectors.dart';
-import 'package:astro_mobile/framework/common/utils/file_utils.dart';
-import 'package:astro_mobile/framework/enum/app_enum.dart';
-import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
-import 'package:astro_mobile/framework/services/api_service.dart';
-import 'package:astro_mobile/framework/services/app_session_service.dart';
 import 'package:astro_mobile/pages/layout/sidebar/sidebar_widget.dart';
 import 'package:astro_mobile/pages/widgets/astro_widgets/enrollment_summary_container.dart';
 import 'package:astro_mobile/pages/widgets/astro_widgets/section_header.dart';
@@ -18,97 +11,25 @@ import 'package:astro_mobile/screen_utils/extensions/extens.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get_it/get_it.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class WelcomePage extends StatefulWidget {
+  final LoggedInUserModel? userModel;
+  final Uint8List? profileByesData;
+  const WelcomePage(
+      {super.key, required this.userModel, required this.profileByesData});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<WelcomePage> createState() => _WelcomePageState();
 }
 
-class _HomepageState extends State<Homepage> {
-  LoggedInUserModel? userModel;
-  late final AppSessionService _sessionService;
-  final GetIt _getIt = GetIt.instance;
-  late final LoggerService _loggerService;
-  late final ApiService _apiService;
-  Uint8List? profileByesData;
-
-  @override
-  void initState() {
-    super.initState();
-    _sessionService = _getIt<AppSessionService>();
-    _apiService = _getIt<ApiService>();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      loadSessionData();
-    });
-  }
-
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  // }
-
-  loadSessionData() async {
-    final user = await _sessionService.getUserLoggedInModel();
-    if (mounted && user != null) {
-      setState(() {
-        userModel = user;
-        loadProfileImage(
-          userId: user.userId ?? 0,
-        );
-      });
-    }
-  }
-
-  Future<void> loadProfileImage({required int? userId}) async {
-    if (userId == null) {
-      return showErrorDialog(context, "Unable to get user profile picture");
-    }
-    try {
-      LoadingDialog().show(context: context, text: "Loading Please wait...");
-
-      final fileResult = await _apiService.getUserPicture(userId: userId);
-
-      LoadingDialog().hide();
-
-      if (fileResult == null) {
-        _loggerService.writeLog(
-            "getUserPicture: Unable to get user profile picture",
-            LogMessageLevel.error);
-        showErrorDialog(context, "Unable to get user profile picture");
-
-        return;
-      } else if (!fileResult.success) {
-        _loggerService.writeLog(
-            "getUserPicture: Unable to get user profile picture- ${fileResult.errorMsg}",
-            LogMessageLevel.error);
-        showErrorDialog(context, " ${fileResult.errorMsg}");
-        return;
-      }
-
-      String stringBinary = fileResult.result;
-      setState(() {
-        profileByesData = FileUtils.convertStringToUint8List(stringBinary);
-      });
-    } catch (e, stackTrace) {
-      _loggerService.writeLog(
-          "getUserPicture: Unable to get user profile picture",
-          LogMessageLevel.error,
-          e,
-          stackTrace);
-      showErrorDialog(context, "Unable to get user profile picture");
-    }
-  }
-
+class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: SidebarWidget(
-        profileByesData: profileByesData,
-        userModel: userModel,
+        profileByesData: widget.profileByesData,
+        userModel: widget.userModel,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -124,7 +45,9 @@ class _HomepageState extends State<Homepage> {
               ),
               1.ph,
               WelcomeContainer(
-                profileByesData: profileByesData,
+                profileByesData: widget.profileByesData,
+                title: "'Welcome back, ${widget.userModel?.firstName}",
+                subtitle: 'Let\'s explore the Sky!',
               ),
               2.ph,
               EnrollmentSummaryContainer(),
