@@ -192,3 +192,13 @@ class ExtremelySmallText extends ExtremelySmallTextInternal {
       {super.key, required super.text, super.fontWeight = FontWeight.w500})
       : super(color: ThemeColor.white);
 }
+
+class AppColors {
+  static const textColor = Color(0xff000000);
+  static const blueColor = Color(0xff527CFF);
+  static const greyColor = Color(0xff78819c);
+  static const pinkColor = Color(0xffEC82FF);
+  static const redCOlor = Color(0xffFF7262);
+  static const greenColor = Color(0xff0ACF83);
+  static const lightBlueBackgroundColor = Color(0xffE5EBFF);
+}

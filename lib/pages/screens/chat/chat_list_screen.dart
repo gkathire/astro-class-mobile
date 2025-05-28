@@ -13,7 +13,7 @@ import 'package:astro_mobile/models/app_custom_enums.dart';
 import 'package:astro_mobile/pages/screens/chat/chat_crud_screen.dart';
 import 'package:astro_mobile/pages/screens/chat/chat_list_item_widget.dart';
 import 'package:astro_mobile/pages/widgets/search_text_field.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';

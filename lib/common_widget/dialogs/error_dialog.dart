@@ -1,6 +1,6 @@
 import 'package:astro_mobile/common_widget/dialogs/generic_dialog.dart';
 import 'package:astro_mobile/constant/constant.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
 
 Future<void> showErrorDialog(

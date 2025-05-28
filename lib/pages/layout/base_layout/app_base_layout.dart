@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 
-import 'package:flutter/material.dart';
 import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:astro_mobile/bloc/movie/movie_bloc.dart';
 import 'package:astro_mobile/bloc/movie/movie_event.dart';
@@ -21,8 +20,9 @@ import 'package:astro_mobile/models/app_exception.dart';
 import 'package:astro_mobile/pages/layout/bottom_navigation/app_bottom_navigator.dart';
 import 'package:astro_mobile/pages/layout/bottom_navigation/page_navigation_container.dart';
 import 'package:astro_mobile/pages/layout/sidebar/sidebar_widget.dart';
-import 'package:astro_mobile/themedata/custom_text_scaler.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/custom_text_scaler.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

@@ -1,4 +1,4 @@
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
 
 Container spinnerWidget({bool transparent = false}) {

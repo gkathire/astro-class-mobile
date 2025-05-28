@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:astro_mobile/bloc/auth/auth_bloc.dart';
 import 'package:astro_mobile/bloc/auth/auth_event.dart';
 import 'package:astro_mobile/bloc/auth/auth_state.dart';
@@ -8,9 +7,10 @@ import 'package:astro_mobile/framework/infrastructure/exceptions/auth_exception.
 import 'package:astro_mobile/pages/screens/auth_screens/forgot_password/forgot_password_page.dart';
 import 'package:astro_mobile/pages/widgets/other_login_button_widgets/google_sign_on_button.dart';
 import 'package:astro_mobile/pages/widgets/text_field.dart';
-import 'package:astro_mobile/themedata/custom_text_scaler.dart';
-import 'package:astro_mobile/themedata/fontSizes.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/custom_text_scaler.dart';
+import 'package:astro_mobile/theme_data/font_sizes.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

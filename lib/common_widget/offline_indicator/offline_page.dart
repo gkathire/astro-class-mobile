@@ -1,5 +1,5 @@
 import 'package:app_settings/app_settings.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 

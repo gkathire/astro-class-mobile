@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:astro_mobile/common_widget/styles/content_style.dart';
 import 'package:astro_mobile/pages/screens/user/user_crud_screen.dart';
-import 'package:astro_mobile/themedata/custom_text_scaler.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/custom_text_scaler.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 

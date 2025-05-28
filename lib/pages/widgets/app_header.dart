@@ -1,7 +1,7 @@
 import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:astro_mobile/constant/assets.dart';
-import 'package:astro_mobile/themedata/custom_text_scaler.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/custom_text_scaler.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

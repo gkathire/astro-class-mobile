@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:astro_mobile/common_widget/dialogs/confirmation_dialog.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
@@ -12,7 +10,9 @@ import 'package:astro_mobile/pages/screens/user/user_crud_screen.dart';
 import 'package:astro_mobile/pages/screens/user/user_filter_widget.dart';
 import 'package:astro_mobile/pages/screens/user/user_list_item_widget.dart';
 import 'package:astro_mobile/pages/widgets/search_text_field.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
