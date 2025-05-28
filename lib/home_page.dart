@@ -10,7 +10,7 @@ import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
 import 'package:astro_mobile/framework/services/real_time_communication/real_time_communication_service.dart';
 import 'package:astro_mobile/pages/loading_widgets/splash_screen_widget.dart';
 import 'package:astro_mobile/pages/screens/astro_screens/astro_base_layout_screen.dart';
-import 'package:astro_mobile/pages/screens/auth_screens/login/login_page.dart';
+import 'package:astro_mobile/pages/screens/astro_screens/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:astro_mobile/theme_data/app_theme.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   final Connectivity _connectivity = Connectivity();
   late Stream<List<ConnectivityResult>> _connectivityStream;
 
-  bool _isConnectionToNetwork = true;
+  final bool _isConnectionToNetwork = true;
   final GetIt _getIt = GetIt.instance;
   bool showInitialSplashScreen = true;
 
@@ -108,7 +108,11 @@ class _HomePageState extends State<HomePage> {
                 );
                 // return const AppInitialPage(); // old app page
               } else {
-                return const LoginPage();
+                return CustomBottomNav(
+                  userModel: null,
+                  profileByesData: null,
+                );
+                // return const LoginPage();
               }
             }
           } else {

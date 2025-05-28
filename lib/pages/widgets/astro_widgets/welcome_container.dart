@@ -9,8 +9,13 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 class WelcomeContainer extends StatelessWidget {
   final String? title, subtitle;
   final Uint8List? profileByesData;
+  final bool isLeadingArrow;
   const WelcomeContainer(
-      {super.key, this.title, this.subtitle, this.profileByesData});
+      {super.key,
+      this.title,
+      this.subtitle,
+      this.profileByesData,
+      this.isLeadingArrow = false});
 
   @override
   Widget build(BuildContext context) {
@@ -30,22 +35,40 @@ class WelcomeContainer extends StatelessWidget {
       ),
       child: Row(
         children: [
+          if (isLeadingArrow)
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.arrow_back_outlined,
+                size: 28,
+                color: AppColors.blueColor,
+              ),
+            ),
+          2.pw,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title ?? 'Welcome back',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   color: AppColors.textColor,
                   fontSize: 19.sp,
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              0.6.ph,
-              Text(
-                subtitle ?? 'Let\'s explore the Sky!',
-                style: TextStyle(color: Colors.black, fontSize: 15.sp),
-              ),
+              if (subtitle != null) ...[
+                0.6.ph,
+                Text(
+                  subtitle!,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(color: Colors.black, fontSize: 15.sp),
+                ),
+              ]
             ],
           ),
           Spacer(),

@@ -14,4 +14,5 @@ class AppVectors {
   static const String chat = "${basePath}svg_chat_page.svg";
   static const String home = "${basePath}svg_home.svg";
   static const String person = "${basePath}svg_person.svg";
+  static const String batch = "${basePath}svg_batch.svg";
 }

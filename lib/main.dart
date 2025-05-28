@@ -15,6 +15,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -34,39 +35,44 @@ Future<void> main() async {
     AppSessionService.init(); // init shared preference
     runApp(ScreenUtilInit(
       designSize: const Size(360, 690),
-      builder: (context, child) => MaterialApp(
-        theme: ThemeData(
-          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-              .copyWith(
-            bodyMedium: GoogleFonts.poppins(
-                textStyle: Theme.of(context).textTheme.bodyMedium),
-          ),
-        ),
-        builder: EasyLoading.init(),
-        navigatorKey: navigatorKey,
-        home: MultiBlocProvider(
-          providers: [
-            // auth bloc
-            BlocProvider<AuthBloc>(
-              create: (context) => AuthBloc(getIt<ApiService>(),
-                  getIt<AppSessionService>(), getIt<LoggerService>()),
-            ),
-            // movie bloc
-            BlocProvider<MovieBloc>(
-              create: (context) => MovieBloc(
-                getIt<AppSessionService>(),
-                getIt<ApiService>(),
-                getIt<LoggerService>(),
+      builder: (context, child) {
+        return ResponsiveSizer(builder: (context, orientation, screenType) {
+          return MaterialApp(
+            theme: ThemeData(
+              textTheme:
+                  GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+                      .copyWith(
+                bodyMedium: GoogleFonts.poppins(
+                    textStyle: Theme.of(context).textTheme.bodyMedium),
               ),
             ),
-            // navigation bloc
-            BlocProvider(
-              create: (context) => NavigationBloc(),
+            builder: EasyLoading.init(),
+            navigatorKey: navigatorKey,
+            home: MultiBlocProvider(
+              providers: [
+                // auth bloc
+                BlocProvider<AuthBloc>(
+                  create: (context) => AuthBloc(getIt<ApiService>(),
+                      getIt<AppSessionService>(), getIt<LoggerService>()),
+                ),
+                // movie bloc
+                BlocProvider<MovieBloc>(
+                  create: (context) => MovieBloc(
+                    getIt<AppSessionService>(),
+                    getIt<ApiService>(),
+                    getIt<LoggerService>(),
+                  ),
+                ),
+                // navigation bloc
+                BlocProvider(
+                  create: (context) => NavigationBloc(),
+                ),
+              ],
+              child: HomePage(loggerService: loggerService),
             ),
-          ],
-          child: HomePage(loggerService: loggerService),
-        ),
-      ),
+          );
+        });
+      },
     ));
   }, (error, stackTrace) {
     loggerService.writeLog(
