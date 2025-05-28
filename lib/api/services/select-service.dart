@@ -2,7 +2,7 @@
 // Any changes made to this file will be removed.
 // For making custom code changes, add code in custom select service.
 
-import 'package:flutter_app/framework/model/framework_model.dart';
+import 'package:astro_mobile/framework/model/framework_model.dart';
 
 class SelectService {
   List<Status> GetAllEnumGroupTypes() {

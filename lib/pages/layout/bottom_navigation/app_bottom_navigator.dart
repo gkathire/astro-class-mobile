@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/bloc/navigation/navigation_bloc.dart';
-import 'package:flutter_app/bloc/navigation/navigation_event.dart';
-import 'package:flutter_app/bloc/navigation/navigation_state.dart';
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/framework/enum/app_enum.dart';
-import 'package:flutter_app/locator/locator_setup.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/bloc/navigation/navigation_bloc.dart';
+import 'package:astro_mobile/bloc/navigation/navigation_event.dart';
+import 'package:astro_mobile/bloc/navigation/navigation_state.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/framework/enum/app_enum.dart';
+import 'package:astro_mobile/locator/locator_setup.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppBottomNavigator extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter_app/framework/enum/app_enum.dart';
+import 'package:astro_mobile/framework/enum/app_enum.dart';
 
 class LoggerHelper {
   static String getLogMessageLevel(LogMessageLevel level) {

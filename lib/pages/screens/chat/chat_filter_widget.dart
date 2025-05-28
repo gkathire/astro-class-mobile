@@ -1,9 +1,9 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:flutter_app/api/services/select-service.dart';
-import 'package:flutter_app/common_widget/styles/button_style.dart';
-import 'package:flutter_app/framework/infrastructure/log/logger_service.dart';
-import 'package:flutter_app/framework/services/api_service.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/api/services/select-service.dart';
+import 'package:astro_mobile/common_widget/styles/button_style.dart';
+import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
+import 'package:astro_mobile/framework/services/api_service.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

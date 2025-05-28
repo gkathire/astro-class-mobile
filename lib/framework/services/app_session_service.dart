@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/constant/session_constants.dart';
-import 'package:flutter_app/framework/enum/app_enum.dart';
-import 'package:flutter_app/framework/infrastructure/log/logger_service.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/constant/session_constants.dart';
+import 'package:astro_mobile/framework/enum/app_enum.dart';
+import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppSessionService {

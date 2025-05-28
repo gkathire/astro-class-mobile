@@ -1,5 +1,5 @@
-import 'package:flutter_app/main.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/main.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 
 void showGlobalErrorDialog({required String title, required String content}) {

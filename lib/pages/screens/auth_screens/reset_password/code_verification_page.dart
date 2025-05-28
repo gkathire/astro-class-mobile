@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/screens/auth_screens/reset_password/reset_password_page.dart';
-import 'package:flutter_app/pages/widgets/text_field.dart';
-import 'package:flutter_app/themedata/fontSizes.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/pages/screens/auth_screens/reset_password/reset_password_page.dart';
+import 'package:astro_mobile/pages/widgets/text_field.dart';
+import 'package:astro_mobile/themedata/fontSizes.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CodeVerificationPage extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_app/common_widget/dialogs/loading_dialog_controller.dart';
+import 'package:astro_mobile/common_widget/dialogs/loading_dialog_controller.dart';
 import 'package:flutter/material.dart';
 
 class LoadingDialog {

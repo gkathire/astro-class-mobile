@@ -1,8 +1,8 @@
 import 'dart:math' as Math;
 
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/framework/services/app_session_service.dart';
-import 'package:flutter_app/framework/services/configuration_service.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/framework/services/app_session_service.dart';
+import 'package:astro_mobile/framework/services/configuration_service.dart';
 import 'package:signalr_netcore/hub_connection.dart' as signalR;
 import 'package:signalr_netcore/signalr_client.dart';
 

@@ -1,9 +1,9 @@
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter_app/common_widget/loader/spinner_widget.dart';
-import 'package:flutter_app/common_widget/styles/content_style.dart';
-import 'package:flutter_app/common_widget/styles/dot_widget.dart';
-import 'package:flutter_app/pages/fl_chart/utils/fl_chart_colors.dart';
-import 'package:flutter_app/screen_utils/currency_utils.dart';
+import 'package:astro_mobile/common_widget/loader/spinner_widget.dart';
+import 'package:astro_mobile/common_widget/styles/content_style.dart';
+import 'package:astro_mobile/common_widget/styles/dot_widget.dart';
+import 'package:astro_mobile/pages/fl_chart/utils/fl_chart_colors.dart';
+import 'package:astro_mobile/screen_utils/currency_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

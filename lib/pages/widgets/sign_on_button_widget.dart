@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/main.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/main.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

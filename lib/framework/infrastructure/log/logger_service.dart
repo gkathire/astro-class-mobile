@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:flutter_app/framework/enum/app_enum.dart';
-import 'package:flutter_app/framework/infrastructure/log/Ilogger_service.dart';
-import 'package:flutter_app/framework/infrastructure/log/logger_helper.dart';
+import 'package:astro_mobile/framework/enum/app_enum.dart';
+import 'package:astro_mobile/framework/infrastructure/log/Ilogger_service.dart';
+import 'package:astro_mobile/framework/infrastructure/log/logger_helper.dart';
 import 'package:logger/logger.dart';
 
 class LoggerService implements IloggerService {

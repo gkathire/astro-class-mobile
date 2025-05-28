@@ -1,6 +1,6 @@
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/constant/constant.dart';
-import 'package:flutter_app/models/app_custom_model.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/constant/constant.dart';
+import 'package:astro_mobile/models/app_custom_model.dart';
 
 final List<HomeScreenCategoryMenuModel> dashboardCategoryMenuList = [
   HomeScreenCategoryMenuModel(homeScreenCategoryItems: [

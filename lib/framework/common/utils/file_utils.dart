@@ -4,7 +4,7 @@ import 'dart:math' as Math;
 import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter_app/framework/infrastructure/log/logger_service.dart';
+import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
 import 'package:http/http.dart' as http;
 import 'package:open_filex/open_filex.dart';
 import 'package:path/path.dart' as path;

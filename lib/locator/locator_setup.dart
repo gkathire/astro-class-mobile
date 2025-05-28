@@ -1,11 +1,11 @@
-import 'package:flutter_app/api/services/enum_badge_service.dart';
-import 'package:flutter_app/api/services/enum_text_color_service.dart';
-import 'package:flutter_app/api/services/select-service.dart';
-import 'package:flutter_app/bloc/movie/movie_bloc.dart';
-import 'package:flutter_app/bloc/navigation/navigation_bloc.dart';
-import 'package:flutter_app/framework/infrastructure/log/logger_service.dart';
-import 'package:flutter_app/framework/services/app_session_service.dart';
-import 'package:flutter_app/framework/services/real_time_communication/real_time_communication_service.dart';
+import 'package:astro_mobile/api/services/enum_badge_service.dart';
+import 'package:astro_mobile/api/services/enum_text_color_service.dart';
+import 'package:astro_mobile/api/services/select-service.dart';
+import 'package:astro_mobile/bloc/movie/movie_bloc.dart';
+import 'package:astro_mobile/bloc/navigation/navigation_bloc.dart';
+import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
+import 'package:astro_mobile/framework/services/app_session_service.dart';
+import 'package:astro_mobile/framework/services/real_time_communication/real_time_communication_service.dart';
 import 'package:get_it/get_it.dart';
 
 import '../framework/services/api_service.dart';

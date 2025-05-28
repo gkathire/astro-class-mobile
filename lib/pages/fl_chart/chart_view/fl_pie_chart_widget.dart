@@ -1,15 +1,15 @@
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter_app/common_widget/styles/content_style.dart';
-import 'package:flutter_app/constant/constant.dart';
-import 'package:flutter_app/framework/common/utils/calculation_utils.dart';
-import 'package:flutter_app/framework/common/utils/text_conversion_utils.dart';
-import 'package:flutter_app/models/app_custom_model.dart';
-import 'package:flutter_app/pages/fl_chart/utils/fl_chart_colors.dart';
-import 'package:flutter_app/pages/fl_chart/utils/fl_chart_indicator.dart';
-import 'package:flutter_app/screen_utils/color_utils.dart';
-import 'package:flutter_app/screen_utils/currency_utils.dart';
-import 'package:flutter_app/themedata/custom_text_scaler.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/common_widget/styles/content_style.dart';
+import 'package:astro_mobile/constant/constant.dart';
+import 'package:astro_mobile/framework/common/utils/calculation_utils.dart';
+import 'package:astro_mobile/framework/common/utils/text_conversion_utils.dart';
+import 'package:astro_mobile/models/app_custom_model.dart';
+import 'package:astro_mobile/pages/fl_chart/utils/fl_chart_colors.dart';
+import 'package:astro_mobile/pages/fl_chart/utils/fl_chart_indicator.dart';
+import 'package:astro_mobile/screen_utils/color_utils.dart';
+import 'package:astro_mobile/screen_utils/currency_utils.dart';
+import 'package:astro_mobile/themedata/custom_text_scaler.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

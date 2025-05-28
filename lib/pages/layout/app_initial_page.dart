@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/framework/services/app_session_service.dart';
-import 'package:flutter_app/pages/layout/base_layout/app_base_layout.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/framework/services/app_session_service.dart';
+import 'package:astro_mobile/pages/layout/base_layout/app_base_layout.dart';
 import 'package:get_it/get_it.dart';
 
 class AppInitialPage extends StatefulWidget {

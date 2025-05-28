@@ -1,10 +1,10 @@
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/framework/model/framework_model.dart';
-import 'package:flutter_app/models/app_custom_enums.dart';
-import 'package:flutter_app/pages/screens/chat/chat_crud_screen.dart';
-import 'package:flutter_app/themedata/custom_text_scaler.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/framework/model/framework_model.dart';
+import 'package:astro_mobile/models/app_custom_enums.dart';
+import 'package:astro_mobile/pages/screens/chat/chat_crud_screen.dart';
+import 'package:astro_mobile/themedata/custom_text_scaler.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';

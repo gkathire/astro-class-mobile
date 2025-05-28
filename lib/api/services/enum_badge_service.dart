@@ -1,6 +1,6 @@
-import 'package:flutter_app/common_widget/badge/theme_badge.dart';
-import 'package:flutter_app/common_widget/badge/theme_badge_dark.dart';
-import 'package:flutter_app/models/app-enums.dart';
+import 'package:astro_mobile/common_widget/badge/theme_badge.dart';
+import 'package:astro_mobile/common_widget/badge/theme_badge_dark.dart';
+import 'package:astro_mobile/models/app-enums.dart';
 import 'package:flutter/material.dart';
 
 class EnumBadgeService {

@@ -1,11 +1,11 @@
-import 'package:flutter_app/bloc/auth/auth_event.dart';
-import 'package:flutter_app/bloc/auth/auth_state.dart';
-import 'package:flutter_app/common_widget/dialogs/global_error_dialog.dart';
-import 'package:flutter_app/framework/enum/app_enum.dart';
-import 'package:flutter_app/framework/infrastructure/exceptions/auth_exception.dart';
-import 'package:flutter_app/framework/infrastructure/log/logger_service.dart';
-import 'package:flutter_app/framework/services/api_service.dart';
-import 'package:flutter_app/framework/services/app_session_service.dart';
+import 'package:astro_mobile/bloc/auth/auth_event.dart';
+import 'package:astro_mobile/bloc/auth/auth_state.dart';
+import 'package:astro_mobile/common_widget/dialogs/global_error_dialog.dart';
+import 'package:astro_mobile/framework/enum/app_enum.dart';
+import 'package:astro_mobile/framework/infrastructure/exceptions/auth_exception.dart';
+import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
+import 'package:astro_mobile/framework/services/api_service.dart';
+import 'package:astro_mobile/framework/services/app_session_service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {

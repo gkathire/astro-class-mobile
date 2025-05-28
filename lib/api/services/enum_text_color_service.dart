@@ -1,4 +1,4 @@
-import 'package:flutter_app/models/app-enums.dart';
+import 'package:astro_mobile/models/app-enums.dart';
 import 'package:flutter/material.dart';
 
 class EnumTextColorService {

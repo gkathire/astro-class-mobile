@@ -1,4 +1,4 @@
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:flutter/foundation.dart';
 
 @immutable

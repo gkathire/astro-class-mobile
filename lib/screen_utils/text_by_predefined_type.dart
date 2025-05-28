@@ -1,5 +1,5 @@
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/models/app-enums.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/models/app-enums.dart';
 
 class TextByPredefinedType {
   static String getPredefinedBudgetOrExpenseTypeName(

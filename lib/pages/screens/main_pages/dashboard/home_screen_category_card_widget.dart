@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/framework/common/utils/list_utils.dart';
-import 'package:flutter_app/models/app_custom_model.dart';
-import 'package:flutter_app/pages/screens/main_pages/dashboard/home_screen_category_card_Item_widget.dart';
-import 'package:flutter_app/screen_utils/screen_size_utils.dart';
+import 'package:astro_mobile/framework/common/utils/list_utils.dart';
+import 'package:astro_mobile/models/app_custom_model.dart';
+import 'package:astro_mobile/pages/screens/main_pages/dashboard/home_screen_category_card_Item_widget.dart';
+import 'package:astro_mobile/screen_utils/screen_size_utils.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 typedef OnClickMenuCategoryItemCallback = void Function(int categoryMenuTypeId);

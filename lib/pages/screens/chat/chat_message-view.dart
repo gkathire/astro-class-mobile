@@ -1,17 +1,17 @@
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/common_widget/dialogs/error_dialog.dart';
-import 'package:flutter_app/common_widget/loader/spinner_widget.dart';
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/framework/enum/app_enum.dart';
-import 'package:flutter_app/framework/infrastructure/log/logger_service.dart';
-import 'package:flutter_app/framework/model/framework_model.dart';
-import 'package:flutter_app/framework/services/api_service.dart';
-import 'package:flutter_app/framework/services/real_time_communication/real_time_communication_service.dart';
-import 'package:flutter_app/models/app_custom_enums.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
+import 'package:astro_mobile/common_widget/loader/spinner_widget.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/framework/enum/app_enum.dart';
+import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
+import 'package:astro_mobile/framework/model/framework_model.dart';
+import 'package:astro_mobile/framework/services/api_service.dart';
+import 'package:astro_mobile/framework/services/real_time_communication/real_time_communication_service.dart';
+import 'package:astro_mobile/models/app_custom_enums.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';

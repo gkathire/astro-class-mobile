@@ -1,4 +1,4 @@
-import 'package:flutter_app/framework/model/framework_model.dart';
+import 'package:astro_mobile/framework/model/framework_model.dart';
 
 const List<String> allowedAllFileExtensions = [
   "doc",

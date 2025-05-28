@@ -1,12 +1,12 @@
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/api/services/enum_badge_service.dart';
-import 'package:flutter_app/api/services/enum_text_color_service.dart';
-import 'package:flutter_app/common_widget/badge/theme_badge.dart';
-import 'package:flutter_app/common_widget/styles/content_style.dart';
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/framework/common/utils/date_utils.dart';
-import 'package:flutter_app/themedata/custom_text_scaler.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/services/enum_badge_service.dart';
+import 'package:astro_mobile/api/services/enum_text_color_service.dart';
+import 'package:astro_mobile/common_widget/badge/theme_badge.dart';
+import 'package:astro_mobile/common_widget/styles/content_style.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/framework/common/utils/date_utils.dart';
+import 'package:astro_mobile/themedata/custom_text_scaler.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

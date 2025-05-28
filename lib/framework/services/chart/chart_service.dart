@@ -1,8 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/framework/services/chart/chart_badget.dart';
-import 'package:flutter_app/themedata/custom_color.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/framework/services/chart/chart_badget.dart';
+import 'package:astro_mobile/themedata/custom_color.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

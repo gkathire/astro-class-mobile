@@ -1,7 +1,7 @@
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/framework/infrastructure/interceptor/authinterceptor.dart';
-import 'package:flutter_app/framework/model/result_model.dart';
-import 'package:flutter_app/framework/services/configuration_service.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/framework/infrastructure/interceptor/authinterceptor.dart';
+import 'package:astro_mobile/framework/model/result_model.dart';
+import 'package:astro_mobile/framework/services/configuration_service.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {

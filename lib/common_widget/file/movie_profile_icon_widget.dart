@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:flutter_app/constant/assets.dart';
+import 'package:astro_mobile/constant/assets.dart';
 import 'package:flutter/material.dart';
 
 class MovieProfileIconWidget extends StatelessWidget {

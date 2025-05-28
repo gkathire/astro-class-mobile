@@ -1,4 +1,4 @@
-import 'package:flutter_app/models/app-enums.dart';
+import 'package:astro_mobile/models/app-enums.dart';
 import 'package:intl/intl.dart';
 
 class CurrencyConversionUtils {

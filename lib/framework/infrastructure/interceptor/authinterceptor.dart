@@ -2,8 +2,8 @@ import 'dart:async';
 
 // ignore: depend_on_referenced_packages
 import 'package:chopper/chopper.dart';
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/framework/services/app_session_service.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/framework/services/app_session_service.dart';
 import 'package:get_it/get_it.dart';
 
 class AuthInterceptor implements Interceptor {

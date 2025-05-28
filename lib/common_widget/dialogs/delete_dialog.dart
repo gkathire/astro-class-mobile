@@ -1,6 +1,6 @@
-import 'package:flutter_app/common_widget/dialogs/generic_dialog.dart';
-import 'package:flutter_app/constant/constant.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/common_widget/dialogs/generic_dialog.dart';
+import 'package:astro_mobile/constant/constant.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 
 Future<bool> showDeleteDialog(BuildContext context) {

@@ -1,8 +1,8 @@
-import 'package:flutter_app/common_widget/styles/content_style.dart';
-import 'package:flutter_app/pages/widgets/text_field.dart';
-import 'package:flutter_app/screen_utils/screen_size_utils.dart';
-import 'package:flutter_app/themedata/fontSizes.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/common_widget/styles/content_style.dart';
+import 'package:astro_mobile/pages/widgets/text_field.dart';
+import 'package:astro_mobile/screen_utils/screen_size_utils.dart';
+import 'package:astro_mobile/themedata/fontSizes.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

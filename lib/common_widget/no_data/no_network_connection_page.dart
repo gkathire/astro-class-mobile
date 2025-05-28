@@ -1,4 +1,4 @@
-import 'package:flutter_app/common_widget/no_data/no_network_connection.dart';
+import 'package:astro_mobile/common_widget/no_data/no_network_connection.dart';
 import 'package:flutter/material.dart';
 
 class NoDataFoundPage extends StatefulWidget {

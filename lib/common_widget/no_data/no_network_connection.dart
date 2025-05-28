@@ -1,5 +1,5 @@
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 
 class NoNetworkConnectionFound extends StatefulWidget {

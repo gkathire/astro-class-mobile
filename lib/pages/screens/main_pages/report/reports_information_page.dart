@@ -1,13 +1,13 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/pages/screens/analytical_report/budget_expense_department_report/budget_expense_department_report.dart';
-import 'package:flutter_app/pages/screens/analytical_report/budget_expense_monthly_report/budget_expenses_monthly_report.dart';
-import 'package:flutter_app/pages/screens/analytical_report/budget_expense_resource_type_report/budget_expense_resource_type_report.dart';
-import 'package:flutter_app/pages/screens/analytical_report/out_standing_schedules_report/out_standing_schedule_report_landing.dart';
-import 'package:flutter_app/pages/widgets/movie_info_menu_widget.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/pages/screens/analytical_report/budget_expense_department_report/budget_expense_department_report.dart';
+import 'package:astro_mobile/pages/screens/analytical_report/budget_expense_monthly_report/budget_expenses_monthly_report.dart';
+import 'package:astro_mobile/pages/screens/analytical_report/budget_expense_resource_type_report/budget_expense_resource_type_report.dart';
+import 'package:astro_mobile/pages/screens/analytical_report/out_standing_schedules_report/out_standing_schedule_report_landing.dart';
+import 'package:astro_mobile/pages/widgets/movie_info_menu_widget.dart';
 
 class ReportsInformationPage extends StatefulWidget {
   final LoggedInUserModel? userModel;

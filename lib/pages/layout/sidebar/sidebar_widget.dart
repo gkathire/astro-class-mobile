@@ -1,16 +1,16 @@
 import 'dart:typed_data';
 
-import 'package:flutter_app/api/generated/code/filmicall.swagger.dart';
-import 'package:flutter_app/bloc/auth/auth_bloc.dart';
-import 'package:flutter_app/bloc/auth/auth_event.dart';
-import 'package:flutter_app/bloc/movie/movie_bloc.dart';
-import 'package:flutter_app/bloc/movie/movie_event.dart';
-import 'package:flutter_app/common_widget/dialogs/logout_dialog.dart';
-import 'package:flutter_app/constant/assets.dart';
-import 'package:flutter_app/framework/services/app_session_service.dart';
-import 'package:flutter_app/screen_utils/screen_size_utils.dart';
-import 'package:flutter_app/themedata/custom_text_scaler.dart';
-import 'package:flutter_app/themedata/themecolor.dart';
+import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/bloc/auth/auth_bloc.dart';
+import 'package:astro_mobile/bloc/auth/auth_event.dart';
+import 'package:astro_mobile/bloc/movie/movie_bloc.dart';
+import 'package:astro_mobile/bloc/movie/movie_event.dart';
+import 'package:astro_mobile/common_widget/dialogs/logout_dialog.dart';
+import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/framework/services/app_session_service.dart';
+import 'package:astro_mobile/screen_utils/screen_size_utils.dart';
+import 'package:astro_mobile/themedata/custom_text_scaler.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

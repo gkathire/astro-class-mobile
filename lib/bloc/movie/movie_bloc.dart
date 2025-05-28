@@ -1,12 +1,12 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_app/bloc/movie/movie_event.dart';
-import 'package:flutter_app/bloc/movie/movie_state.dart';
-import 'package:flutter_app/common_widget/dialogs/global_error_dialog.dart';
-import 'package:flutter_app/framework/enum/app_enum.dart';
-import 'package:flutter_app/framework/infrastructure/log/logger_service.dart';
-import 'package:flutter_app/framework/services/api_service.dart';
-import 'package:flutter_app/framework/services/app_session_service.dart';
-import 'package:flutter_app/models/app_exception.dart';
+import 'package:astro_mobile/bloc/movie/movie_event.dart';
+import 'package:astro_mobile/bloc/movie/movie_state.dart';
+import 'package:astro_mobile/common_widget/dialogs/global_error_dialog.dart';
+import 'package:astro_mobile/framework/enum/app_enum.dart';
+import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
+import 'package:astro_mobile/framework/services/api_service.dart';
+import 'package:astro_mobile/framework/services/app_session_service.dart';
+import 'package:astro_mobile/models/app_exception.dart';
 import 'package:flutter/foundation.dart';
 
 @immutable
