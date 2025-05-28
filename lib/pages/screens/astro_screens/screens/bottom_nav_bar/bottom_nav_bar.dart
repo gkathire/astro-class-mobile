@@ -4,8 +4,8 @@ import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:astro_mobile/constant/app_vectors.dart';
 import 'package:astro_mobile/pages/screens/astro_screens/screens/catalogue_page/catalogue_page.dart';
 import 'package:astro_mobile/pages/screens/astro_screens/screens/class_list_page/class_list_page.dart';
-import 'package:astro_mobile/pages/screens/astro_screens/screens/coming_soon_page/coming_soon_page.dart';
 import 'package:astro_mobile/pages/screens/astro_screens/screens/message_page/messages_page.dart';
+import 'package:astro_mobile/pages/screens/astro_screens/screens/profile/profile_page.dart';
 import 'package:astro_mobile/pages/screens/astro_screens/screens/welcome_page/welcome_page.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,7 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> _icons = [
+    final List<String> icons = [
       AppVectors.home,
       AppVectors.svgClass,
       AppVectors.path,
@@ -33,7 +33,7 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
       AppVectors.person,
     ];
 
-    final List<Widget> _pages = [
+    final List<Widget> pages = [
       WelcomePage(
           userModel: widget.userModel, profileByesData: widget.profileByesData),
       ClassListPage(
@@ -42,18 +42,17 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
           userModel: widget.userModel, profileByesData: widget.profileByesData),
       MessagesPage(
           userModel: widget.userModel, profileByesData: widget.profileByesData),
-      ComingSoonPage(
-          userModel: widget.userModel, profileByesData: widget.profileByesData),
+      ProfilePage(userModel: widget.userModel, profileByesData: widget.profileByesData),
     ];
 
     return Scaffold(
-      body: _pages[_currentIndex],
+      body: pages[_currentIndex],
       bottomNavigationBar: SizedBox(
         height: 60,
         child: LayoutBuilder(
           builder: (context, constraints) {
             final totalWidth = constraints.maxWidth;
-            final itemWidth = totalWidth / _icons.length;
+            final itemWidth = totalWidth / icons.length;
 
             return Stack(
               children: [
@@ -78,7 +77,7 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
                 // Icons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: List.generate(_icons.length, (index) {
+                  children: List.generate(icons.length, (index) {
                     final isSelected = _currentIndex == index;
                     return GestureDetector(
                       onTap: () {
@@ -91,7 +90,7 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
                         height: 60,
                         child: Center(
                           child: SvgPicture.asset(
-                            _icons[index],
+                            icons[index],
                             color: isSelected ? Colors.white : Colors.black,
                           ),
                         ),
