@@ -58,9 +58,11 @@ class BatchCard extends StatelessWidget {
                 Text(
                   title,
                   style: const TextStyle(
-                      fontWeight: FontWeight.w600, color: Colors.black),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black),
                 ),
-                1.ph,
+                0.5.ph,
                 Row(
                   children: [
                     Icon(
@@ -71,11 +73,11 @@ class BatchCard extends StatelessWidget {
                     2.pw,
                     Text(
                       "$videosCount Videos",
-                      style: const TextStyle(fontSize: 12, color: Colors.black),
+                      style: const TextStyle(fontSize: 13, color: Colors.black),
                     ),
                   ],
                 ),
-                1.ph,
+                0.5.ph,
                 Row(
                   children: [
                     SvgPicture.asset(
@@ -85,7 +87,7 @@ class BatchCard extends StatelessWidget {
                     2.pw,
                     Text(
                       "$startDate-$endDate",
-                      style: const TextStyle(fontSize: 12, color: Colors.black),
+                      style: const TextStyle(fontSize: 13, color: Colors.black),
                     ),
                   ],
                 ),

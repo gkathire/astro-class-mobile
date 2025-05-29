@@ -107,7 +107,7 @@ class _BatchesPageState extends State<BatchesPage> {
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       return Padding(
-                        padding: EdgeInsets.only(bottom: 2.h),
+                        padding: EdgeInsets.only(bottom: 1.h),
                         child: GestureDetector(
                           onTap: () => Navigator.push(
                               context,

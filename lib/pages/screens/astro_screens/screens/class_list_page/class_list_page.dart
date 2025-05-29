@@ -51,7 +51,7 @@ class ClassListPage extends StatelessWidget {
                   onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => BatchesPage())),
                   child: Padding(
-                    padding: EdgeInsets.only(bottom: 2.h),
+                    padding: EdgeInsets.only(bottom: 1.h),
                     child: Container(
                       padding: EdgeInsets.symmetric(
                         horizontal: 3.w,
@@ -107,7 +107,7 @@ class ClassListPage extends StatelessWidget {
                                   "Morning batch #3",
                                   style: TextStyle(
                                     color: AppColors.textColor,
-                                    fontSize: 14.sp,
+                                    fontSize: 15.sp,
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),

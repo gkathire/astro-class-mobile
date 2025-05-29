@@ -45,41 +45,49 @@ class VideoCard extends StatelessWidget {
               size: 25.sp,
             ),
             3.pw,
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w600, color: Colors.black),
-                ),
-                Row(
-                  children: [
-                    SvgPicture.asset(
-                      AppVectors.calender,
-                      height: 14,
-                    ),
-                    1.5.pw,
-                    Text(
-                      date,
-                      style: const TextStyle(fontSize: 12, color: Colors.black),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    SvgPicture.asset(
-                      AppVectors.clock,
-                      height: 14,
-                    ),
-                    2.pw,
-                    Text(
-                      time,
-                      style: const TextStyle(fontSize: 12, color: Colors.black),
-                    ),
-                  ],
-                ),
-              ],
+            Flexible(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black),
+                  ),
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        AppVectors.calender,
+                        height: 15,
+                      ),
+                      1.5.pw,
+                      Text(
+                        date,
+                        style:
+                            const TextStyle(fontSize: 13, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        AppVectors.clock,
+                        height: 16,
+                      ),
+                      2.pw,
+                      Text(
+                        time,
+                        style:
+                            const TextStyle(fontSize: 13, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),

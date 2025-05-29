@@ -12,18 +12,54 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../../constant/app_images.dart';
 
-class CataloguePage extends StatelessWidget {
+class CataloguePage extends StatefulWidget {
   final LoggedInUserModel? userModel;
   final Uint8List? profileByesData;
   const CataloguePage(
       {super.key, required this.userModel, required this.profileByesData});
 
   @override
+  State<CataloguePage> createState() => _CataloguePageState();
+}
+
+class _CataloguePageState extends State<CataloguePage> {
+  List catalogues = [
+    {
+      "title": "Intro Plan Subscription",
+      "validityMonths": 1,
+      "price": 999,
+      "color": AppColors.greenColor,
+      "iconPath": AppVectors.refresh
+    },
+    {
+      "title": "Next Step Subscription",
+      "validityMonths": 3,
+      "price": 1999,
+      "color": AppColors.blueColor,
+      "iconPath": AppVectors.mLogo
+    },
+    {
+      "title": "Grow Pack Subscription",
+      "validityMonths": 6,
+      "price": 2999,
+      "color": AppColors.redCOlor,
+      "iconPath": AppVectors.saturnLogo
+    },
+    {
+      "title": "Full Journey Subscription",
+      "validityMonths": 12,
+      "price": 3999,
+      "color": AppColors.pinkColor,
+      "iconPath": AppVectors.check
+    },
+  ];
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: SidebarWidget(
-          profileByesData: profileByesData,
-          userModel: userModel,
+          profileByesData: widget.profileByesData,
+          userModel: widget.userModel,
         ),
         body: SafeArea(
           child: SingleChildScrollView(
@@ -39,41 +75,26 @@ class CataloguePage extends StatelessWidget {
                 ),
                 1.ph,
                 WelcomeContainer(
-                  profileByesData: profileByesData,
-                  title: "Choose Your Path",
+                  profileByesData: widget.profileByesData,
+                  title: "Catalogues",
                   subtitle: "Pick a plan that fits your journey",
                 ),
                 2.ph,
-                Column(
-                  children: [
-                    CatalogueCard(
-                        title: "Intro Plan Subscription",
-                        validityMonths: 1,
-                        price: 999,
-                        color: AppColors.greenColor,
-                        iconPath: AppVectors.refresh),
-                    CatalogueCard(
-                      title: "Next Step Subscription",
-                      validityMonths: 3,
-                      price: 1999,
-                      color: AppColors.blueColor,
-                      iconPath: AppVectors.mLogo,
-                      isRecommended: true,
-                    ),
-                    CatalogueCard(
-                        title: "Grow Pack Subscription",
-                        validityMonths: 6,
-                        price: 2999,
-                        color: AppColors.redCOlor,
-                        iconPath: AppVectors.saturnLogo),
-                    CatalogueCard(
-                        title: "Full Journey Subscription",
-                        validityMonths: 12,
-                        price: 3999,
-                        color: AppColors.pinkColor,
-                        iconPath: AppVectors.check),
-                  ],
-                )
+                ListView.builder(
+                    itemCount: catalogues.length,
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: EdgeInsets.only(bottom: 1.h),
+                        child: CatalogueCard(
+                            title: catalogues[index]['title'],
+                            validityMonths: catalogues[index]['validityMonths'],
+                            isRecommended: index == 1,
+                            price: catalogues[index]['price'],
+                            color: catalogues[index]['color'],
+                            iconPath: catalogues[index]['iconPath']),
+                      );
+                    })
               ],
             ),
           ),

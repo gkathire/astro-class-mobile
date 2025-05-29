@@ -94,8 +94,8 @@ class WelcomeContainer extends StatelessWidget {
                       ),
               ),
               Positioned(
-                top: -10,
-                right: 0,
+                top: -5,
+                right: 4,
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
