@@ -1,3 +1,4 @@
+import 'package:astro_mobile/pages/screens/astro_screens/screens/videos/videos_details_page.dart';
 import 'package:astro_mobile/pages/widgets/astro_widgets/video_card.dart';
 import 'package:astro_mobile/pages/widgets/search_text_field.dart';
 import 'package:astro_mobile/screen_utils/extensions/extens.dart';
@@ -118,10 +119,16 @@ class _VideosPageState extends State<VideosPage> {
                   ),
                 ),
                 1.ph,
-                VideoCard(
-                    title: "5 - Planetary Transits and Their Effects",
-                    date: "30 May 2025",
-                    time: "02:15:50"),
+                GestureDetector(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => VideoDetailsPage())),
+                  child: VideoCard(
+                      title: "5 - Planetary Transits and Their Effects",
+                      date: "30 May 2025",
+                      time: "02:15:50"),
+                ),
                 2.ph,
                 Align(
                   alignment: Alignment.centerRight,
@@ -153,11 +160,17 @@ class _VideosPageState extends State<VideosPage> {
                               color: Colors.black.withOpacity(0.1),
                             ),
                         itemBuilder: (context, index) {
-                          return VideoCard(
-                            title: pastWeekVideos[index]['title'],
-                            date: pastWeekVideos[index]['date'],
-                            time: pastWeekVideos[index]['time'],
-                            isRoundedBorders: false,
+                          return GestureDetector(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => VideoDetailsPage())),
+                            child: VideoCard(
+                              title: pastWeekVideos[index]['title'],
+                              date: pastWeekVideos[index]['date'],
+                              time: pastWeekVideos[index]['time'],
+                              isRoundedBorders: false,
+                            ),
                           );
                         }),
                   ),
