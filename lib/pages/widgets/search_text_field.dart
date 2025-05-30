@@ -38,8 +38,7 @@ class SearchTextField extends StatelessWidget {
         decoration: fieldDecoration ??
             BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: ThemeColor.white,
-                border: Border.all(color: ThemeColor.mainThemeColor)),
+                color: ThemeColor.white),
         child: Row(
           children: [
             SizedBox(width: 20.w),

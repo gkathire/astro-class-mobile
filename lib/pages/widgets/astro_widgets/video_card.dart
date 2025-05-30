@@ -36,7 +36,7 @@ class VideoCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(isRoundedBorders ? 14 : 0),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 1.h),
         child: Row(
           children: [
             Icon(
@@ -44,7 +44,7 @@ class VideoCard extends StatelessWidget {
               color: AppColors.blueColor,
               size: 25.sp,
             ),
-            3.pw,
+            5.pw,
             Flexible(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +54,7 @@ class VideoCard extends StatelessWidget {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                        fontSize: 14,
+                        fontSize: 15,
                         fontWeight: FontWeight.w600,
                         color: Colors.black),
                   ),
