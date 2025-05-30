@@ -42,7 +42,8 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
           userModel: widget.userModel, profileByesData: widget.profileByesData),
       MessagesPage(
           userModel: widget.userModel, profileByesData: widget.profileByesData),
-      ProfilePage(userModel: widget.userModel, profileByesData: widget.profileByesData),
+      ProfilePage(
+          userModel: widget.userModel, profileByesData: widget.profileByesData),
     ];
 
     return Scaffold(
@@ -76,10 +77,11 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
 
                 // Icons
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: List.generate(icons.length, (index) {
                     final isSelected = _currentIndex == index;
-                    return GestureDetector(
+                    return InkWell(
+                      splashColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
                       onTap: () {
                         setState(() {
                           _currentIndex = index;
