@@ -14,4 +14,13 @@ class AppVectors {
   static const String chat = "${basePath}svg_chat_page.svg";
   static const String home = "${basePath}svg_home.svg";
   static const String person = "${basePath}svg_person.svg";
+  static const String batch = "${basePath}svg_batch.svg";
+  static const String editProfile = "${basePath}svg_edit_profile.svg";
+  static const String editProfileInfo = "${basePath}svg_edit_profile_info.svg";
+  static const String notification = "${basePath}svg_notification.svg";
+  static const String helpAndSupport = "${basePath}svg_help_and_support.svg";
+  static const String settings = "${basePath}svg_settings.svg";
+  static const String star = "${basePath}svg_star.svg";
+  static const String email = "${basePath}svg_email.svg";
+  static const String password = "${basePath}svg_password.svg";
 }

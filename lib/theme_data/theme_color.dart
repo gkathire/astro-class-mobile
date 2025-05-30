@@ -200,5 +200,6 @@ class AppColors {
   static const pinkColor = Color(0xffEC82FF);
   static const redCOlor = Color(0xffFF7262);
   static const greenColor = Color(0xff0ACF83);
+  static const darkBlueColor = Color(0xff001144);
   static const lightBlueBackgroundColor = Color(0xffE5EBFF);
 }

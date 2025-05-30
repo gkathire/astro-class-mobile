@@ -33,7 +33,7 @@ class _WelcomePageState extends State<WelcomePage> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 2.h),
+          padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
           child: Column(
             children: [
               1.ph,

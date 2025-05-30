@@ -3,7 +3,6 @@
 import 'package:astro_mobile/constant/assets.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BaseSignOnButton extends StatelessWidget {
   String? label;
@@ -24,33 +23,39 @@ class BaseSignOnButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SizedBox(
+      child: Container(
           height: 55,
-          width: 0.8.sw,
-          child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                elevation: 0,
-                side: BorderSide(color: ThemeColor.lightGrey),
-                backgroundColor: Colors.white,
+          padding: const EdgeInsets.all(0),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                offset: const Offset(0, 4),
+                blurRadius: 8,
+                spreadRadius: 1,
               ),
-              onPressed: () {},
-              child: Padding(
-                  padding: const EdgeInsets.all(0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image(
-                        image: AssetImage(logo()),
-                        height: 50,
-                      ),
-                      Center(
-                          child: Text(
-                        "Login with Google",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: ThemeColor.black),
-                      ))
-                    ],
-                  )))),
+            ],
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(14),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(
+                image: AssetImage(logo()),
+                height: 50,
+              ),
+              Center(
+                  child: Text(
+                "Login with Google",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: ThemeColor.black,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16),
+              ))
+            ],
+          )),
     );
   }
 }
