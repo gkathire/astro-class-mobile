@@ -20,6 +20,8 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_it/get_it.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import 'pages/screens/auth_screens/login/login_page.dart';
+
 class HomePage extends StatefulWidget {
   final LoggerService loggerService;
   const HomePage({super.key, required this.loggerService});
@@ -108,11 +110,7 @@ class _HomePageState extends State<HomePage> {
                 );
                 // return const AppInitialPage(); // old app page
               } else {
-                return CustomBottomNav(
-                  userModel: null,
-                  profileByesData: null,
-                );
-                // return const LoginPage();
+                return const LoginPage();
               }
             }
           } else {

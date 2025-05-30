@@ -20,4 +20,7 @@ class AppVectors {
   static const String notification = "${basePath}svg_notification.svg";
   static const String helpAndSupport = "${basePath}svg_help_and_support.svg";
   static const String settings = "${basePath}svg_settings.svg";
+  static const String star = "${basePath}svg_star.svg";
+  static const String email = "${basePath}svg_email.svg";
+  static const String password = "${basePath}svg_password.svg";
 }
