@@ -1,12 +1,8 @@
 import 'dart:typed_data';
 
-import 'package:flutter/material.dart';
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/bloc/navigation/navigation_bloc.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
 import 'package:astro_mobile/common_widget/dialogs/loading_dialog.dart';
-import 'package:astro_mobile/common_widget/loader/spinner_widget.dart';
-import 'package:astro_mobile/common_widget/no_data/no_data_found_widget.dart';
 import 'package:astro_mobile/constant/assets.dart';
 import 'package:astro_mobile/framework/common/utils/file_utils.dart';
 import 'package:astro_mobile/framework/enum/app_enum.dart';
@@ -14,13 +10,13 @@ import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
 import 'package:astro_mobile/framework/services/api_service.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
 import 'package:astro_mobile/locator/locator_setup.dart';
-import 'package:astro_mobile/models/app_exception.dart';
+import 'package:astro_mobile/models/app-model.dart';
 import 'package:astro_mobile/pages/layout/bottom_navigation/app_bottom_navigator.dart';
 import 'package:astro_mobile/pages/layout/bottom_navigation/page_navigation_container.dart';
 import 'package:astro_mobile/pages/layout/sidebar/sidebar_widget.dart';
-import 'package:astro_mobile/themedata/custom_text_scaler.dart';
-import 'package:astro_mobile/themedata/themecolor.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:astro_mobile/theme_data/custom_text_scaler.dart';
+import 'package:astro_mobile/theme_data/theme_color.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_it/get_it.dart';
@@ -79,32 +75,32 @@ class _AppBaseLayoutState extends State<AppBaseLayout> {
     try {
       canShowLoadingWidgetWithMessage(canShow: true);
       // get company
-      final companyInfo = await _apiService.getCompany(
-        companyId: companyId,
-      );
+      // final companyInfo = await _apiService.getCompany(
+      //   companyId: companyId,
+      // );
 
       canShowLoadingWidgetWithMessage(canShow: false);
 
-      if (companyInfo == null || companyInfo.result?.model == null) {
-        _loggerService.writeLog("getCompany: Unable to get company information",
-            LogMessageLevel.info);
-        await showErrorDialog(context, "Unable to get company information");
-        return;
-      } else if (!companyInfo.success) {
-        _loggerService.writeLog(
-            "getCompany: Unable to get company information- ${companyInfo.errorMsg}",
-            LogMessageLevel.error);
-        await showErrorDialog(context,
-            "Unable to get company information: ${companyInfo.errorMsg}");
-
-        return;
-      }
-      if (mounted) {
-        setState(() {
-          predefinedCurrencyTypeId =
-              companyInfo.result?.model?.predefinedCurrencyTypeId ?? 0;
-        });
-      }
+      // if (companyInfo == null || companyInfo.result?.model == null) {
+      //   _loggerService.writeLog("getCompany: Unable to get company information",
+      //       LogMessageLevel.info);
+      //   await showErrorDialog(context, "Unable to get company information");
+      //   return;
+      // } else if (!companyInfo.success) {
+      //   _loggerService.writeLog(
+      //       "getCompany: Unable to get company information- ${companyInfo.errorMsg}",
+      //       LogMessageLevel.error);
+      //   await showErrorDialog(context,
+      //       "Unable to get company information: ${companyInfo.errorMsg}");
+      //
+      //   return;
+      // }
+      // if (mounted) {
+      //   setState(() {
+      //     predefinedCurrencyTypeId =
+      //         companyInfo.result?.model?.predefinedCurrencyTypeId ?? 0;
+      //   });
+      // }
     } catch (error, stackTrace) {
       _loggerService.writeLog("Unable to get company information",
           LogMessageLevel.error, error, stackTrace);

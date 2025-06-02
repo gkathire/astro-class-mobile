@@ -1,7 +1,3 @@
-import 'dart:typed_data';
-
-import 'package:flutter/material.dart';
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/bloc/navigation/navigation_bloc.dart';
 import 'package:astro_mobile/bloc/navigation/navigation_event.dart';
 import 'package:astro_mobile/bloc/navigation/navigation_state.dart';
@@ -11,9 +7,11 @@ import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
 import 'package:astro_mobile/framework/services/api_service.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
 import 'package:astro_mobile/locator/locator_setup.dart';
+import 'package:astro_mobile/models/app-model.dart';
 import 'package:astro_mobile/pages/screens/chat/chat_list_screen.dart';
 import 'package:astro_mobile/pages/screens/main_pages/dashboard/dashboard_welcome_page.dart';
 import 'package:astro_mobile/pages/screens/main_pages/report/reports_information_page.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 typedef PageNavigationSelectionCallback = void Function(

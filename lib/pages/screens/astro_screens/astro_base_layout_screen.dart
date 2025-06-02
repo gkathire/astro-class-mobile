@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
 import 'package:astro_mobile/common_widget/dialogs/loading_dialog.dart';
 import 'package:astro_mobile/framework/common/utils/file_utils.dart';
@@ -8,6 +7,7 @@ import 'package:astro_mobile/framework/enum/app_enum.dart';
 import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
 import 'package:astro_mobile/framework/services/api_service.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
+import 'package:astro_mobile/models/app-model.dart';
 import 'package:astro_mobile/pages/screens/astro_screens/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';

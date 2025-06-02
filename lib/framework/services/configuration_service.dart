@@ -3,8 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ConfigurationService {
   static SharedPreferences? _prefs;
-  static String serverUrl = "http://qa-1.astroclass.com";
-  // static String serverUrl = "http://app.astroclass.com";
+  static String serverUrl = "http://qa-1.filmicall.com";
   static String? userFirstName = '', userLastName = '', userEmail = '';
   static String? username = "";
   static String? password = "";

@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
+import 'package:astro_mobile/models/app-model.dart';
 import 'package:astro_mobile/pages/layout/base_layout/app_base_layout.dart';
+import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
 class AppInitialPage extends StatefulWidget {
