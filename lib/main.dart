@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:astro_mobile/bloc/auth/auth_bloc.dart';
-import 'package:astro_mobile/bloc/movie/movie_bloc.dart';
 import 'package:astro_mobile/bloc/navigation/navigation_bloc.dart';
 import 'package:astro_mobile/framework/enum/app_enum.dart';
 import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
@@ -54,14 +53,6 @@ Future<void> main() async {
                 BlocProvider<AuthBloc>(
                   create: (context) => AuthBloc(getIt<ApiService>(),
                       getIt<AppSessionService>(), getIt<LoggerService>()),
-                ),
-                // movie bloc
-                BlocProvider<MovieBloc>(
-                  create: (context) => MovieBloc(
-                    getIt<AppSessionService>(),
-                    getIt<ApiService>(),
-                    getIt<LoggerService>(),
-                  ),
                 ),
                 // navigation bloc
                 BlocProvider(

@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/api/services/enum_badge_service.dart';
 import 'package:astro_mobile/api/services/enum_text_color_service.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';

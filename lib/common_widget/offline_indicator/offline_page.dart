@@ -3,7 +3,7 @@ import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../api/generated/code/filmicall.swagger.dart';
+import '../../api/generated/code/astroclass.swagger.dart';
 import '../../framework/services/app_session_service.dart';
 import '../../pages/widgets/app_header.dart';
 

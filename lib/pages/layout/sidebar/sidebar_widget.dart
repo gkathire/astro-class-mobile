@@ -3,8 +3,6 @@ import 'dart:typed_data';
 import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:astro_mobile/bloc/auth/auth_bloc.dart';
 import 'package:astro_mobile/bloc/auth/auth_event.dart';
-import 'package:astro_mobile/bloc/movie/movie_bloc.dart';
-import 'package:astro_mobile/bloc/movie/movie_event.dart';
 import 'package:astro_mobile/common_widget/dialogs/logout_dialog.dart';
 import 'package:astro_mobile/constant/assets.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
@@ -143,7 +141,6 @@ class _SidebarWidgetState extends State<SidebarWidget> {
                     final isShouldLogout = await showLogOutDialog(context);
                     if (isShouldLogout) {
                       context.read<AuthBloc>().add(const AuthEventLoggedOut());
-                      context.read<MovieBloc>().add(const MovieResetEvent());
                     }
                   },
                   child: Container(

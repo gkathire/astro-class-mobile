@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
 import 'package:astro_mobile/bloc/navigation/navigation_bloc.dart';
 import 'package:astro_mobile/bloc/navigation/navigation_event.dart';
@@ -5,15 +6,11 @@ import 'package:astro_mobile/bloc/navigation/navigation_state.dart';
 import 'package:astro_mobile/constant/assets.dart';
 import 'package:astro_mobile/framework/enum/app_enum.dart';
 import 'package:astro_mobile/locator/locator_setup.dart';
-import 'package:astro_mobile/theme_data/theme_color.dart';
-import 'package:flutter/material.dart';
+import 'package:astro_mobile/themedata/themecolor.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppBottomNavigator extends StatefulWidget {
-  final List<MovieModel>? movieList;
-  final MovieModel? selectedMovie;
-  const AppBottomNavigator(
-      {super.key, required this.movieList, required this.selectedMovie});
+  const AppBottomNavigator({super.key});
 
   @override
   State<StatefulWidget> createState() => _AppBottomNavigator();
@@ -26,8 +23,6 @@ class _AppBottomNavigator extends State<AppBottomNavigator> {
     return BlocBuilder<NavigationBloc, NavigationState>(
         bloc: navigationBloc,
         builder: (context, state) {
-          final movieList = state.movieList;
-          final selectedMovie = state.selectedMovie;
           if (state is NavigationStateSelectedItem) {
             return BottomNavigationBar(
                 currentIndex: state.selectedIndex,
@@ -47,9 +42,8 @@ class _AppBottomNavigator extends State<AppBottomNavigator> {
                     IconThemeData(color: ThemeColor.mainThemeColor),
                 onTap: (index) {
                   navigationBloc.add(NavigationEventSelectedItem(
-                      selectedIndex: index,
-                      movieList: movieList,
-                      selectedMovie: selectedMovie));
+                    selectedIndex: index,
+                  ));
                 },
                 items: bottomNavigationItem(index: state.selectedIndex));
           } else {

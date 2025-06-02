@@ -12,7 +12,7 @@ class LoggerService implements IloggerService {
       dateTimeFormat: DateTimeFormat.dateAndTime,
       printEmojis: true,
     ),
-    // output: FileOutput(file: File('filmicall_log.txt')),
+    // output: FileOutput(file: File('astroclass_log.txt')),
   );
 
   @override

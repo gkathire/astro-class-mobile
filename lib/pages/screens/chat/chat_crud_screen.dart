@@ -1,4 +1,4 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/api/services/select-service.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
 import 'package:astro_mobile/common_widget/dialogs/success_dialog.dart';
@@ -20,7 +20,6 @@ typedef ChatOnSubmitCallBack = void Function(bool? value);
 class ChatCrudScreen extends StatefulWidget {
   ChatOnSubmitCallBack onSubmitCallback;
   int? companyId;
-  int? movieId;
   ChatModel? chat;
   bool isCreateMode;
   bool isEditMode;
@@ -31,7 +30,6 @@ class ChatCrudScreen extends StatefulWidget {
       {super.key,
       required this.onSubmitCallback,
       required this.companyId,
-      required this.movieId,
       this.chat,
       required this.isCreateMode,
       required this.isEditMode,
@@ -196,8 +194,7 @@ class _ChatCrudScreenState extends State<ChatCrudScreen> {
           return;
         }
 
-        await showSuccessDialog(
-            context, "Successfully movie chat group created");
+        await showSuccessDialog(context, "Successfully chat group created");
 
         widget.onSubmitCallback(true);
 
@@ -252,8 +249,7 @@ class _ChatCrudScreenState extends State<ChatCrudScreen> {
           return;
         }
 
-        await showSuccessDialog(
-            context, "Successfully movie chat group updated");
+        await showSuccessDialog(context, "Successfully chat group updated");
         widget.onSubmitCallback(true);
         navigateToListView();
       }

@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/constant/app_images.dart';
 import 'package:astro_mobile/pages/layout/sidebar/sidebar_widget.dart';
 import 'package:astro_mobile/pages/widgets/astro_widgets/messages_widget.dart';

@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/constant/app_vectors.dart';
 import 'package:astro_mobile/pages/screens/astro_screens/screens/catalogue_page/catalogue_page.dart';
 import 'package:astro_mobile/pages/screens/astro_screens/screens/class_list_page/class_list_page.dart';

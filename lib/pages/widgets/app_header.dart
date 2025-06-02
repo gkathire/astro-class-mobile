@@ -1,4 +1,4 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/constant/assets.dart';
 import 'package:astro_mobile/theme_data/custom_text_scaler.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';

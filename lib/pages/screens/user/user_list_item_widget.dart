@@ -1,4 +1,4 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/common_widget/styles/content_style.dart';
 import 'package:astro_mobile/pages/screens/user/user_crud_screen.dart';
 import 'package:astro_mobile/theme_data/custom_text_scaler.dart';
@@ -11,14 +11,12 @@ typedef onUserDeleteCallback = void Function({required UserModel? user});
 
 class UserListItemWidget extends StatefulWidget {
   UserModel? user;
-  int? movieId;
   int? companyId;
   onUserDeleteCallback onDeleteCallback;
   UserOnSubmitCallBack onSubmitCallback;
   UserListItemWidget(
       {super.key,
       required this.user,
-      required this.movieId,
       required this.companyId,
       required this.onDeleteCallback,
       required this.onSubmitCallback});
@@ -39,7 +37,6 @@ class _UserListItemWidgetState extends State<UserListItemWidget> {
                   isViewMode: false,
                   isCreateMode: false,
                   user: widget.user,
-                  movieId: widget.movieId,
                   onSubmitCallback: (value) {
                     widget.onSubmitCallback(value);
                   },
@@ -58,7 +55,6 @@ class _UserListItemWidgetState extends State<UserListItemWidget> {
                   isViewMode: true,
                   isCreateMode: false,
                   user: widget.user,
-                  movieId: widget.movieId,
                   onSubmitCallback: (value) {
                     widget.onSubmitCallback(value);
                   },

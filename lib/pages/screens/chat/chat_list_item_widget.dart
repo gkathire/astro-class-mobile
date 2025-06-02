@@ -1,4 +1,4 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/constant/assets.dart';
 import 'package:astro_mobile/framework/model/framework_model.dart';
 import 'package:astro_mobile/models/app_custom_enums.dart';
@@ -15,7 +15,6 @@ typedef onChatDeleteCallback = void Function({required ChatModel? chat});
 
 class ChatListItemWidget extends StatefulWidget {
   ChatModel? chat;
-  int? movieId;
   int? companyId;
   LoggedInUserModel? userModel;
   onChatDeleteCallback onDeleteCallback;
@@ -23,7 +22,6 @@ class ChatListItemWidget extends StatefulWidget {
   ChatListItemWidget(
       {super.key,
       required this.chat,
-      required this.movieId,
       required this.userModel,
       required this.companyId,
       required this.onDeleteCallback,
@@ -54,7 +52,6 @@ class _ChatListItemWidgetState extends State<ChatListItemWidget> {
                   isViewMode: false,
                   isCreateMode: false,
                   chat: widget.chat,
-                  movieId: widget.movieId,
                   onSubmitCallback: (value) {
                     widget.onSubmitCallback(value);
                   },
@@ -73,7 +70,6 @@ class _ChatListItemWidgetState extends State<ChatListItemWidget> {
                   isViewMode: true,
                   isCreateMode: false,
                   chat: widget.chat,
-                  movieId: widget.movieId,
                   onSubmitCallback: (value) {
                     widget.onSubmitCallback(value);
                   },
@@ -96,9 +92,10 @@ class _ChatListItemWidgetState extends State<ChatListItemWidget> {
               CircleAvatar(
                 radius: 14.r,
                 backgroundColor: ThemeColor.lightGrey,
-                backgroundImage: widget.chat?.isGroup == true
-                    ? const AssetImage(AppImageAssets.userGroupIcon)
-                    : const AssetImage(AppImageAssets.profileImage),
+                backgroundImage: const AssetImage(AppImageAssets.profileImage),
+                // backgroundImage: widget.chat?.isGroup == true
+                //     ? const AssetImage(AppImageAssets.userGroupIcon)
+                //     : const AssetImage(AppImageAssets.profileImage),
               ),
               SizedBox(
                 width: 20.w,

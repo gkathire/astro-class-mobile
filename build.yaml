@@ -7,5 +7,5 @@ targets:
           output_folder: 'lib/api/generated/code'
           multipart_file_type: "http.MultipartFile"
           input_urls:
-            - url: "http://SpecialUser:SpecialPassword1@qa-1.filmicall.com/swagger/v1/swagger.json"
-              file_name: "filmicall.json"
+            - url: "http://127.0.0.1:8000/api/openapi.json"
+              file_name: "astro_class.json"

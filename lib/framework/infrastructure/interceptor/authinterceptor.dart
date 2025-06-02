@@ -2,7 +2,7 @@ import 'dart:async';
 
 // ignore: depend_on_referenced_packages
 import 'package:chopper/chopper.dart';
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
 import 'package:get_it/get_it.dart';
 

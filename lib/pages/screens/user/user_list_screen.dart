@@ -1,4 +1,4 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/common_widget/dialogs/confirmation_dialog.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
 import 'package:astro_mobile/common_widget/dialogs/success_dialog.dart';
@@ -21,8 +21,7 @@ import 'package:very_good_infinite_list/very_good_infinite_list.dart';
 
 class UserListScreen extends StatefulWidget {
   int? companyId;
-  int? movieId;
-  UserListScreen({super.key, required this.companyId, required this.movieId});
+  UserListScreen({super.key, required this.companyId,});
 
   @override
   State<UserListScreen> createState() => _UserListScreenState();
@@ -250,7 +249,6 @@ class _UserListScreenState extends State<UserListScreen> {
                                 isCreateMode: true,
                                 isEditMode: false,
                                 isViewMode: false,
-                                movieId: widget.movieId,
                                 title: "Create user",
                                 onSubmitCallback: (value) {
                                   onResetUser();
@@ -352,7 +350,6 @@ class _UserListScreenState extends State<UserListScreen> {
                           onPressed: () {
                             showUserFilterWidget(
                               context: context,
-                              movieId: widget.movieId,
                               companyId: widget.companyId,
                               predefinedUserTypeId:
                                   selectedPredefinedUserTypeId,
@@ -390,7 +387,6 @@ class _UserListScreenState extends State<UserListScreen> {
                     separatorBuilder: (context, index) => const Divider(),
                     itemBuilder: (context, index) {
                       return UserListItemWidget(
-                        movieId: widget.movieId,
                         companyId: widget.companyId,
                         user: users[index],
                         key: widget.key,

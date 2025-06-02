@@ -1,16 +1,13 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
 
 class ChatInformationPage extends StatefulWidget {
   final LoggedInUserModel? userModel;
-  final MovieModel? movieModel;
-  final List<MovieModel>? movieListModel;
-  ChatInformationPage(
-      {super.key,
-      required this.userModel,
-      required this.movieModel,
-      required this.movieListModel});
+  ChatInformationPage({
+    super.key,
+    required this.userModel,
+  });
 
   @override
   State<ChatInformationPage> createState() => _ChatInformationPageState();

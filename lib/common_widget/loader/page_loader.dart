@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/common_widget/loader/spinner_widget.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
 import 'package:astro_mobile/pages/layout/sidebar/sidebar_widget.dart';

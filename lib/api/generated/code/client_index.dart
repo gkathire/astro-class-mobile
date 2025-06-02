@@ -1,2 +1,2 @@
-export 'filmicall.swagger.dart' show Filmicall;
-export 'filmicall.swagger.dart' show Filmicall;
+export 'astro_class.swagger.dart' show AstroClass;
+export 'astro_class.swagger.dart' show AstroClass;

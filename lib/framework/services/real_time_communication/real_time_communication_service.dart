@@ -1,6 +1,6 @@
 import 'dart:math' as Math;
 
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
 import 'package:astro_mobile/framework/services/configuration_service.dart';
 import 'package:signalr_netcore/hub_connection.dart' as signalR;

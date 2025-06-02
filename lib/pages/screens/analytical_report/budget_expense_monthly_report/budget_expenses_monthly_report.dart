@@ -1,4 +1,4 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
 import 'package:astro_mobile/common_widget/loader/spinner_widget.dart';
 import 'package:astro_mobile/common_widget/styles/content_style.dart';

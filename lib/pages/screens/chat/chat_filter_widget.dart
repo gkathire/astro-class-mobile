@@ -9,7 +9,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../api/generated/code/filmicall.swagger.dart';
+import '../../../api/generated/code/astroclass.swagger.dart';
 import '../../../theme_data/custom_text_scaler.dart';
 
 typedef OnTabChatSubmitFilter = void Function({
@@ -21,7 +21,6 @@ Future<dynamic> showChatFilterWidget({
   required OnTabChatSubmitFilter onSubmitFilter,
   required OnTabChatResetFilter onResetFilter,
   required int? companyId,
-  required int? movieId,
 }) {
   return showModalBottomSheet(
       isScrollControlled: true,
@@ -32,7 +31,6 @@ Future<dynamic> showChatFilterWidget({
           height: 0.40.sh,
           width: 1.sw,
           child: ChatFilterWidget(
-            movieId: movieId,
             companyId: companyId,
             selectedCompanyId: companyId,
             onSubmitFilter: ({
@@ -54,14 +52,12 @@ class ChatFilterWidget extends StatefulWidget {
   final OnTabChatSubmitFilter onSubmitFilter;
   final int? companyId;
   final OnTabChatResetFilter onResetFilter;
-  final int? movieId;
   final int? selectedCompanyId;
   const ChatFilterWidget({
     super.key,
     required this.onSubmitFilter,
     required this.onResetFilter,
     required this.companyId,
-    required this.movieId,
     required this.selectedCompanyId,
   });
 

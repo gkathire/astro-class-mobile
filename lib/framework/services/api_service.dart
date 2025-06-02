@@ -1,4 +1,4 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/framework/infrastructure/interceptor/authinterceptor.dart';
 import 'package:astro_mobile/framework/model/result_model.dart';
 import 'package:astro_mobile/framework/services/configuration_service.dart';
@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 class ApiService {
   var yearago = DateTime.now().subtract(const Duration(days: 365));
-  var api = Filmicall.create(
+  var api = AstroClass.create(
       baseUrl: Uri.parse(ConfigurationService.serverUrl),
       interceptors: [AuthInterceptor()]);
 

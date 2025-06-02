@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:flutter/material.dart';
 
 class ComingSoonPage extends StatelessWidget {

@@ -10,7 +10,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../theme_data/custom_text_scaler.dart';
+import '../../../themedata/custom_text_scaler.dart';
 
 typedef OnTabUserSubmitFilter = void Function({
   int? selectedPredefinedUserTypeId,
@@ -22,7 +22,6 @@ Future<dynamic> showUserFilterWidget({
   required OnTabUserSubmitFilter onSubmitFilter,
   required OnTabUserResetFilter onResetFilter,
   required int? companyId,
-  required int? movieId,
   required int? predefinedUserTypeId,
 }) {
   return showModalBottomSheet(
@@ -34,7 +33,6 @@ Future<dynamic> showUserFilterWidget({
           height: 0.40.sh,
           width: 1.sw,
           child: UserFilterWidget(
-            movieId: movieId,
             companyId: companyId,
             selectedPredefinedUserTypeId: predefinedUserTypeId,
             selectedCompanyId: companyId,
@@ -59,7 +57,6 @@ class UserFilterWidget extends StatefulWidget {
   final OnTabUserSubmitFilter onSubmitFilter;
   final int? companyId;
   final OnTabUserResetFilter onResetFilter;
-  final int? movieId;
   final int? selectedPredefinedUserTypeId;
   final int? selectedCompanyId;
   const UserFilterWidget({
@@ -67,7 +64,6 @@ class UserFilterWidget extends StatefulWidget {
     required this.onSubmitFilter,
     required this.onResetFilter,
     required this.companyId,
-    required this.movieId,
     required this.selectedPredefinedUserTypeId,
     required this.selectedCompanyId,
   });

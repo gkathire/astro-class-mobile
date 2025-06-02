@@ -23,7 +23,7 @@ class LoggerHelper {
   static Future<File> _getLogFile() async {
     // var docPath = await getApplicationDocumentsDirectory();
     var docPath = "";
-    final filePath = "$docPath/filmicall_logs.txt";
+    final filePath = "$docPath/astroclass_logs.txt";
     return File(filePath);
   }
 

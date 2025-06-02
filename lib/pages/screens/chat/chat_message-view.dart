@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
 import 'package:astro_mobile/common_widget/loader/spinner_widget.dart';
 import 'package:astro_mobile/constant/assets.dart';
@@ -489,9 +489,11 @@ class _ChatMessageViewState extends State<ChatMessageView> {
                   CircleAvatar(
                     radius: 16.r,
                     backgroundColor: ThemeColor.lightGrey,
-                    backgroundImage: widget.selectedChat?.isGroup == true
-                        ? const AssetImage(AppImageAssets.userGroupIcon)
-                        : const AssetImage(AppImageAssets.profileImage),
+                    backgroundImage:
+                        const AssetImage(AppImageAssets.profileImage),
+                    // backgroundImage: widget.selectedChat?.isGroup == true
+                    //     ? const AssetImage(AppImageAssets.userGroupIcon)
+                    //     : const AssetImage(AppImageAssets.profileImage),
                   ),
                   SizedBox(
                     width: 20.w,

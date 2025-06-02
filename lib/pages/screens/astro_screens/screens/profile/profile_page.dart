@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import '../../../../../api/generated/code/filmicall.swagger.dart';
+import '../../../../../api/generated/code/astroclass.swagger.dart';
 import '../../../../../constant/app_images.dart';
 import '../../../../../theme_data/theme_color.dart';
 

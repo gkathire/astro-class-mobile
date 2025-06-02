@@ -1,4 +1,4 @@
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/common_widget/dialogs/confirmation_dialog.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
 import 'package:astro_mobile/common_widget/dialogs/success_dialog.dart';
@@ -24,13 +24,8 @@ import 'package:very_good_infinite_list/very_good_infinite_list.dart';
 
 class ChatListScreen extends StatefulWidget {
   int? companyId;
-  int? movieId;
   LoggedInUserModel? userModel;
-  ChatListScreen(
-      {super.key,
-      required this.companyId,
-      required this.movieId,
-      required this.userModel});
+  ChatListScreen({super.key, required this.companyId, required this.userModel});
 
   @override
   State<ChatListScreen> createState() => _ChatListScreenState();
@@ -122,7 +117,6 @@ class _ChatListScreenState extends State<ChatListScreen> {
                   title: "Create chat group",
                   isViewMode: false,
                   isCreateMode: true,
-                  movieId: widget.movieId,
                   onSubmitCallback: (value) {
                     // widget.onSubmitCallback(value);
                   },
@@ -342,23 +336,6 @@ class _ChatListScreenState extends State<ChatListScreen> {
                               }).toList();
                             },
                           ),
-
-                          // Container(
-                          //   decoration: BoxDecoration(
-                          //       borderRadius: const BorderRadius.all(
-                          //           Radius.circular(10))),
-                          //   width: 40.w,
-                          //   height: 40.h,
-                          //   child: IconButton(
-                          //       onPressed: () {
-                          //                     onSelectCreateChatOption(option: ChatOverallMenuOptions.createNewChatGroup.value);
-                          //       },
-                          //       icon: Icon(
-                          //         size: 25,
-                          //         Icons.add,
-                          //         color: Colors.black87,
-                          //       )),
-                          // ),
                         ],
                       ),
                     ),
@@ -373,7 +350,6 @@ class _ChatListScreenState extends State<ChatListScreen> {
                           ),
                           itemBuilder: (context, index) {
                             return ChatListItemWidget(
-                              movieId: widget.movieId,
                               companyId: widget.companyId,
                               userModel: widget.userModel,
                               chat: chats[index],

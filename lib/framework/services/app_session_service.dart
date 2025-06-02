@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:astro_mobile/api/generated/code/filmicall.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/constant/session_constants.dart';
 import 'package:astro_mobile/framework/enum/app_enum.dart';
 import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
