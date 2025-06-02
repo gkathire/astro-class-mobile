@@ -77,7 +77,7 @@ class EnrollmentSummaryContainer extends StatelessWidget {
                   Text(
                     "Valid Until 27/06",
                     style: TextStyle(
-                      color: AppColors.greyColor,
+                      color: AppColors.darkBlueColor.withOpacity(0.53),
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w600,
                     ),

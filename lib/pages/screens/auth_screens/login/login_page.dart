@@ -1,18 +1,21 @@
 import 'package:astro_mobile/bloc/auth/auth_bloc.dart';
-import 'package:astro_mobile/bloc/auth/auth_event.dart';
 import 'package:astro_mobile/bloc/auth/auth_state.dart';
 import 'package:astro_mobile/common_widget/dialogs/error_dialog.dart';
-import 'package:astro_mobile/constant/assets.dart';
+import 'package:astro_mobile/constant/app_vectors.dart';
 import 'package:astro_mobile/framework/infrastructure/exceptions/auth_exception.dart';
-import 'package:astro_mobile/pages/screens/auth_screens/forgot_password/forgot_password_page.dart';
+import 'package:astro_mobile/pages/screens/astro_screens/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:astro_mobile/pages/widgets/other_login_button_widgets/google_sign_on_button.dart';
-import 'package:astro_mobile/pages/widgets/text_field.dart';
+import 'package:astro_mobile/screen_utils/extensions/extens.dart';
 import 'package:astro_mobile/theme_data/custom_text_scaler.dart';
 import 'package:astro_mobile/theme_data/font_sizes.dart';
 import 'package:astro_mobile/theme_data/theme_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+
+import '../../../../constant/app_images.dart';
+import '../../../widgets/custom_textfield.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -22,13 +25,13 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  late TextEditingController _username;
-  late TextEditingController _password;
+  late TextEditingController emailController;
+  late TextEditingController passwordController;
 
   @override
   void initState() {
-    _username = TextEditingController();
-    _password = TextEditingController();
+    emailController = TextEditingController();
+    passwordController = TextEditingController();
     super.initState();
   }
 
@@ -60,102 +63,79 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: .1.sh,
-                  ),
-                  Center(
-                    child: SizedBox(
-                        height: 25.h,
-                        child: const Image(
-                          image: AssetImage(AppImageAssets.filmiLogoImage),
-                          alignment: Alignment.center,
-                        )),
-                  ),
-                  SizedBox(
-                    height: 35.h,
-                  ),
+                  10.ph,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      TitleText(
-                          text: "Login",
-                          color: ThemeColor.black,
-                          fontweight: FontWeight.bold)
+                      SvgPicture.asset(AppVectors.star),
+                      3.pw,
+                      Image.asset(
+                        AppImages.sukran,
+                        width: 62.w,
+                        height: 5.h,
+                        fit: BoxFit.contain,
+                      ),
                     ],
                   ),
-                  SizedBox(
-                    height: 20.h,
+                  5.ph,
+                  Text(
+                    "Login Now",
+                    style: TextStyle(
+                        fontSize: 30,
+                        color: AppColors.blueColor,
+                        fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(
-                      width: screenWidth,
-                      child: SmallMediumText(
-                          color: ThemeColor.black, text: "E-mail")),
-                  SizedBox(
-                    height: 10.h,
+                  0.5.ph,
+                  Text(
+                    "Please login to continue using our app",
+                    style: TextStyle(
+                        color: Colors.black, fontStyle: FontStyle.italic),
                   ),
-                  Center(
-                      child: LoginTextField(
-                    "Enter your email",
-                    controller: _username,
-                    hint: "Enter you email",
-                  )),
-                  SizedBox(
-                    height: 10.h,
+                  3.ph,
+                  Text(
+                    "Email Id",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(
-                      width: screenWidth,
-                      child: SmallMediumText(
-                        color: ThemeColor.black,
-                        text: "Password",
-                      )),
-                  SizedBox(
-                    height: 10.h,
+                  1.ph,
+                  CustomTextField(
+                    hinttext: "Enter your Username",
+                    controller: emailController,
+                    prefixIcon: SvgPicture.asset(AppVectors.email, height: 18),
                   ),
-                  Center(
-                      child: PasswordTextField(
-                    label: "Enter your Password",
-                    controller: _password,
-                    hint: "Enter your password",
-                  )),
-                  SizedBox(
-                    height: 5.h,
+                  2.ph,
+                  Text(
+                    "Password",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        ForgotPasswordPage()));
-                          },
-                          child: const Text(
-                            "Forgot Password?",
-                            style: TextStyle(
-                                color: Colors.blue,
-                                fontSize: 18,
-                                decoration: TextDecoration.underline,
-                                decorationColor: Colors.blue,
-                                fontWeight: FontWeight.w500,
-                                decorationStyle: TextDecorationStyle.solid),
-                          ))
-                    ],
+                  1.ph,
+                  CustomTextField(
+                    hinttext: "Enter your password",
+                    controller: passwordController,
+                    prefixIcon:
+                        SvgPicture.asset(AppVectors.password, height: 24),
                   ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
+                  5.ph,
                   Center(
                     child: SizedBox(
-                      height: 45.h,
+                      height: 7.h,
                       width: screenWidth,
                       child: ElevatedButton(
                         onPressed: () {
-                          final username = _username.text;
-                          final password = _password.text;
-                          context.read<AuthBloc>().add(AuthEventLoggedIn(
-                              username: username, password: password));
+                          final username = emailController.text;
+                          final password = passwordController.text;
+                          // context.read<AuthBloc>().add(AuthEventLoggedIn(
+                          //     username: username, password: password));
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CustomBottomNav(
+                                      userModel: null, profileByesData: null)));
                         },
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
@@ -171,50 +151,39 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 30.h,
+                    height: 3.h,
                   ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Divider(
-                              height: 20,
-                              thickness: 2,
-                              color: ThemeColor.lightGrey),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Divider(
+                            height: 20,
+                            thickness: 1,
+                            color: Colors.black.withValues(alpha: 0.1)),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text(
+                          "Or",
+                          textScaler: CustomTextScaler.headerThree,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: ThemeColor.black,
+                              fontWeight: FontWeight.w500),
                         ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 8.0),
-                          child: Text(
-                            "or login with",
-                            textScaler: CustomTextScaler.headerThree,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(color: ThemeColor.darkGrey),
-                          ),
-                        ),
-                        Expanded(
-                          child: Divider(
-                              height: 20,
-                              thickness: 2,
-                              color: ThemeColor.lightGrey),
-                        ),
-                      ],
-                    ),
+                      ),
+                      Expanded(
+                        child: Divider(
+                            height: 20,
+                            thickness: 1,
+                            color: Colors.black.withValues(alpha: 0.1)),
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    height: 25.h,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        GoogleSignOnButton(),
-                      ],
-                    ),
-                  )
+                  5.ph,
+                  GoogleSignOnButton()
                 ],
               ),
             )));

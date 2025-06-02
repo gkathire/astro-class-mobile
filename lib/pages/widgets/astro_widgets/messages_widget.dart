@@ -72,8 +72,8 @@ class MessagesWidget extends StatelessWidget {
                   title,
                   style: TextStyle(
                     color: AppColors.textColor,
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
                 1.ph,
