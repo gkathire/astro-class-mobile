@@ -61,7 +61,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               exception: UnauthorizedException(), isLoading: false));
         }
 
-        final user = result.result?.model;
+        final user = result.result;
 
         if (user == null) {
           loggerService.writeLog(
@@ -78,7 +78,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
         await sessionService.setUserLoggedInModel(user);
 
-        return emit(AuthStateLoggedIn(loginModel: user, isLoading: false));
+        return emit(
+            AuthStateLoggedIn(loginModel: user?.data, isLoading: false));
       } catch (e, stackTrace) {
         loggerService.writeLog(
             "Unable to login", LogMessageLevel.error, e, stackTrace);

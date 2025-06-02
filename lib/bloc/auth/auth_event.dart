@@ -1,4 +1,3 @@
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:flutter/foundation.dart';
 
 @immutable

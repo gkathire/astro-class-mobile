@@ -1,9 +1,9 @@
 import 'dart:async';
 
-// ignore: depend_on_referenced_packages
-import 'package:chopper/chopper.dart';
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
+// ignore: depend_on_referenced_packages
+import 'package:astro_mobile/models/app-model.dart';
+import 'package:chopper/chopper.dart';
 import 'package:get_it/get_it.dart';
 
 class AuthInterceptor implements Interceptor {
@@ -16,7 +16,7 @@ class AuthInterceptor implements Interceptor {
     late LoggedInUserModel? currentUser;
     final sessionService = getIt<AppSessionService>();
     await sessionService.getUserLoggedInModel()?.then((value) {
-      currentUser = value;
+      currentUser = value as LoggedInUserModel?;
       token = currentUser?.token ?? "";
     });
 

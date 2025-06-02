@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
+import 'package:astro_mobile/api/generated/code/astro_class.swagger.dart';
 import 'package:astro_mobile/constant/session_constants.dart';
 import 'package:astro_mobile/framework/enum/app_enum.dart';
 import 'package:astro_mobile/framework/infrastructure/log/logger_service.dart';
@@ -34,38 +34,6 @@ class AppSessionService {
       try {
         final Map<String, dynamic> userModel = jsonDecode(userString);
         return LoggedInUserModel.fromJson(userModel);
-      } catch (e, stackTrace) {
-        loggerService.writeLog("Error occurred when try to parse json",
-            LogMessageLevel.error, e, stackTrace);
-        return null;
-      }
-    } else {
-      loggerService.writeLog(
-          "no session user data found", LogMessageLevel.info);
-      return null;
-    }
-  }
-
-  Future<void> setSelectedMovieModel(MovieModel? model) async {
-    if (model != null) {
-      try {
-        final movieModel = jsonEncode(model);
-        await _prefs?.setString(selectedMovieModelLocalSessionKey, movieModel);
-      } catch (e, stackTrace) {
-        loggerService.writeLog(
-            "Unable to get session data", LogMessageLevel.error, e, stackTrace);
-      }
-    }
-  }
-
-  Future<MovieModel?>? getSelectedMovieModel() async {
-    String? movieString =
-        await _prefs?.getString(selectedMovieModelLocalSessionKey);
-
-    if (movieString != null && movieString.isNotEmpty) {
-      try {
-        final Map<String, dynamic> movieData = jsonDecode(movieString);
-        return MovieModel.fromJson(movieData);
       } catch (e, stackTrace) {
         loggerService.writeLog("Error occurred when try to parse json",
             LogMessageLevel.error, e, stackTrace);

@@ -5,20 +5,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
   NavigationBloc()
       : super(const NavigationStateSelectedItem(
-            selectedIndex: 0, movieList: [], selectedMovie: null)) {
+          selectedIndex: 0,
+        )) {
     on<NavigationEventSelectedItem>((event, state) {
-      final movieList = event.movieList;
-      final selectedMovie = event.selectedMovie;
       final selectedIndex = event.selectedIndex;
-      return emit(NavigationStateSelectedItem(
-          movieList: movieList,
-          selectedMovie: selectedMovie,
-          selectedIndex: selectedIndex));
+      return emit(NavigationStateSelectedItem(selectedIndex: selectedIndex));
     });
 
     on<NavigationEventReset>((event, state) {
       emit(const NavigationStateSelectedItem(
-          selectedIndex: 0, movieList: [], selectedMovie: null));
+        selectedIndex: 0,
+      ));
     });
   }
 }

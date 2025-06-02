@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:astro_mobile/common_widget/no_data/no_data_found_widget.dart';
 import 'package:astro_mobile/framework/services/app_session_service.dart';
+import 'package:astro_mobile/models/app-model.dart';
 import 'package:astro_mobile/pages/layout/sidebar/sidebar_widget.dart';
 import 'package:astro_mobile/pages/widgets/app_header.dart';
+import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
 class NoDataFoundPage extends StatefulWidget {

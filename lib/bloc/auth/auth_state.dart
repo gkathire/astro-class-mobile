@@ -1,5 +1,5 @@
+import 'package:astro_mobile/models/app-model.dart';
 import 'package:equatable/equatable.dart';
-import 'package:astro_mobile/api/generated/code/astroclass.swagger.dart';
 import 'package:flutter/foundation.dart';
 
 @immutable
